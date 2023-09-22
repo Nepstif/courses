@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # созданные приложения
+    'lesson.apps.LessonConfig',
+    'product.apps.ProductConfig',
+    # установленные приложения
+    "drf_yasg",
+    "rest_framework",
+
 ]
 
 MIDDLEWARE = [
