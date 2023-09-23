@@ -31,7 +31,8 @@ schema_view = get_schema_view(  # pylint: disable=C0103
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/v1/", include("product.urls")),
+    path("api/", include("product.api.urls", namespace="api")),
+    path("list_lesson/", include("lesson.api.urls", namespace="lesson_list")),
     re_path(
         r"^swagger(?P<format>\.json|\.yaml)$",
         schema_view.without_ui(cache_timeout=0),

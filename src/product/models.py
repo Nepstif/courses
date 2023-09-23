@@ -24,7 +24,7 @@ class Product(TimeStampMixin):
     user = models.ForeignKey(
         User,
         on_delete=models.PROTECT,
-        related_name='courses_created',
+        related_name='user',
 
     )
 

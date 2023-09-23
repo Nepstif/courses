@@ -30,7 +30,8 @@ class LessonAdmin(admin.ModelAdmin):
         "created_at",
         "updated_at",
     )
-
+    def get_queryset(self, request):
+        return Lesson.objects.prefetch_related("product")
 
 @admin.register(LessonViewer)
 class LessonViewerAdmin(admin.ModelAdmin):
